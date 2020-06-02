@@ -23,6 +23,7 @@
         methods: {
             onVideoSelect(video) {
                 this.$emit('video-select',video)
+                this.$router.push({name:'Home',query:{message:video.id.videoId}})
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-lg-8" v-if="selectedVideo">
+  <div class="col-lg-8">
     <div class="video-detail">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item"
@@ -7,8 +7,8 @@
                 allowfullscreen />
       </div>
       <div class="details">
-        <h4>{{selectedVideo.snippet.title}}</h4>
-        <p>{{selectedVideo.snippet.description}}</p>
+<!--        <h4>{{selectedVideo.snippet.title}}</h4>-->
+<!--        <p>{{selectedVideo.snippet.description}}</p>-->
       </div>
     </div>
   </div>
@@ -22,7 +22,8 @@
         },
         computed: {
             videoUrl() {
-                return `https://www.youtube.com/embed/${this.selectedVideo.id.videoId}`
+                return `https://www.youtube.com/embed/${this.$route.query.message}`
+                // this.selectedVideo.id.videoId
             }
         }
     }

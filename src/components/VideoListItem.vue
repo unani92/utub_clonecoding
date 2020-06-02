@@ -16,6 +16,7 @@
         methods:{
             onVideoSelect() {
                 this.$emit('video-select',this.video)
+
             }
         },
         computed: {

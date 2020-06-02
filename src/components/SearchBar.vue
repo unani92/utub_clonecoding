@@ -11,6 +11,7 @@
             onInput(event) {
                 // 1. 부모로 커스텀 이벤트를 날린다.
                 this.$emit('input-change',event.target.value)
+                this.$router.push({name:'Home'})
             }
         }
     }

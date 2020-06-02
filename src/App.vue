@@ -7,7 +7,7 @@
 <!-- 단방향 바인딩을 통해 videos 데이터를 videos라는 이름으로 VideoList에 넘겨준다.-->
       <div class="row">
         <videoDetail :selectedVideo="selectedVideo" />
-        <VideoList @video-select="onVideoSelect" :videos="videos" />
+        <VideoList @video-select="onVideoSelect" :videos="videos" :q="q" />
       </div>
     </div>
   </div>
