@@ -50,6 +50,11 @@ export default {
               }
           })
             .then(response => {
+                response.data.items.forEach(item => {
+                    const parser = new DOMParser()
+                    const doc = parser.parseFromString(item.snippet.title, 'text/html')
+                    item.snippet.title = doc.body.innerText
+                })
                 this.videos = response.data.items
             })
             .catch(error => alert(error))
